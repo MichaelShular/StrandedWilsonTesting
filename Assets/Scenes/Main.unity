@@ -480,9 +480,10 @@ GameObject:
   - component: {fileID: 367144117}
   - component: {fileID: 367144116}
   - component: {fileID: 367144115}
+  - component: {fileID: 367144120}
   m_Layer: 0
   m_Name: GatheringSourceWithoutTool
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -495,7 +496,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367144114}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.5
@@ -578,6 +579,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367144120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367144114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac2fc2e1df44ec409bee30e9321f6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceType: 0
 --- !u!1001 &471045612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1144,7 +1158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1527146523}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231027161
 GameObject:
@@ -1204,7 +1218,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1223,14 +1237,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231027161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.14918524, y: -0, z: -0, w: 0.98880935}
+  m_LocalPosition: {x: 0, y: 3.8540003, z: -3.9280014}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1527146523}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 17.159, y: 0, z: 0}
 --- !u!114 &1231027165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,6 +1529,7 @@ GameObject:
   - component: {fileID: 1527146521}
   - component: {fileID: 1527146525}
   - component: {fileID: 1527146524}
+  - component: {fileID: 1527146526}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1529,7 +1544,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527146519}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1581,11 +1596,11 @@ Transform:
   m_GameObject: {fileID: 1527146519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.96, y: 1.038, z: -22.72}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1231027164}
   - {fileID: 1200281094}
+  - {fileID: 1231027164}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1601,7 +1616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37e161d51dc54148a88c0df7820e773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1527146525}
   maxSpeed: 10
   gravity: -30
   jumpHieght: 3
@@ -1630,6 +1645,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1527146526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527146519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335c2bdfec70d934e857501893c33587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasMiningPick: 0
+  hasAxe: 0
+  canCollect: 0
+  currentResourceToCollect: {fileID: 0}
+  pickUpResource: 0
 --- !u!1001 &1559861836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1798,9 +1830,10 @@ GameObject:
   - component: {fileID: 1840514447}
   - component: {fileID: 1840514446}
   - component: {fileID: 1840514445}
+  - component: {fileID: 1840514450}
   m_Layer: 0
   m_Name: GatheringSourceWithTool
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1813,7 +1846,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840514444}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.5
@@ -1896,6 +1929,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840514450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840514444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac2fc2e1df44ec409bee30e9321f6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceType: 1
 --- !u!1001 &1968208464
 PrefabInstance:
   m_ObjectHideFlags: 0
